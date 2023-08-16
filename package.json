@@ -1,0 +1,82 @@
+{
+    "name": "vscode-mr-workspace",
+    "displayName": "Muti-root Workspace",
+    "description": "Colored folders for multi-root workspaces.",
+    "version": "1.0.0",
+    "publisher": "sr-team",
+    "repository": {
+        "url": "https://github.com/sr-tream/vscode-mr-workspace"
+    },
+    "icon": "logo.png",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "extensionKind": [
+        "ui",
+        "workspace"
+    ],
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "workspace",
+        "folder",
+        "color",
+        "statusbar",
+        "panel",
+        "tab"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Multi-root Workaspace",
+            "properties": {
+                "vscode-mr-workspace.panel": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Add border on panel."
+                },
+                "vscode-mr-workspace.statusbar": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Add border on statusbar."
+                },
+                "vscode-mr-workspace.tabbar": {
+                    "type": "string",
+                    "default": "top",
+                    "enum": [
+                        "disabled",
+                        "top",
+                        "bottom"
+                    ],
+                    "description": "Add border on active tab."
+                },
+                "vscode-mr-workspace.saturation": {
+                    "type": "number",
+                    "default": 90
+                },
+                "vscode-mr-workspace.luminance_light": {
+                    "type": "number",
+                    "default": 30
+                },
+                "vscode-mr-workspace.luminance_dark": {
+                    "type": "number",
+                    "default": 80
+                }
+            }
+        }
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.40",
+        "@types/vscode": "^1.56.0",
+        "typescript": "^3.9.7"
+    },
+    "dependencies": {
+        "@types/color-convert": "^2.0.0",
+        "color-convert": "^2.0.1"
+    }
+}
