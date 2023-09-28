@@ -1,3 +1,5 @@
+![demo](demo.gif)
+
 Add colored borders for folders in workspace on:
 
 - panel (disabled by default)
