@@ -2,7 +2,7 @@
     "name": "vscode-mr-workspace",
     "displayName": "Muti-root Workspace",
     "description": "Colored folders for multi-root workspaces.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "sr-team",
     "repository": {
         "url": "https://github.com/sr-tream/vscode-mr-workspace"

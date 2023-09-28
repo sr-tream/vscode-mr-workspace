@@ -51,7 +51,7 @@ function update_color(uri: vscode.Uri) {
     const config = vscode.workspace.getConfiguration("vscode-mr-workspace");
 
     const ws = vscode.workspace.getWorkspaceFolder(uri);
-    if (ws === undefined) {
+    if (ws === undefined || vscode.workspace.workspaceFolders.length < 2) {
         reset_color();
         return;
     }
